@@ -1,22 +1,19 @@
-import React, { useState } from "react";
-import ProductList from "../components/ProductList";
-import SortFilter from "../components/SortFilter";
+import React from "react";
+import Product from "../components/Product";
 
 const Catalog = ({ products, onAddToCart }) => {
-  const [filteredProducts, setFilteredProducts] = useState(products);
-
-  const handleSort = (size) => {
-    if (size === "all") {
-      setFilteredProducts(products);
-    } else {
-      setFilteredProducts(products.filter((product) => product.size === size));
-    }
-  };
-
   return (
-    <div>
-      <SortFilter onSort={handleSort} />
-      <ProductList products={filteredProducts} onAddToCart={onAddToCart} />
+    <div className="container goods__container">
+      <h2 className="goods__title">Featured Items</h2>
+      <ul className="goods__list">
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            product={product}
+            onAddToCart={onAddToCart}
+          />
+        ))}
+      </ul>
     </div>
   );
 };

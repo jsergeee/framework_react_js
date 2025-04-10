@@ -10,41 +10,15 @@ import "./style/style.css";
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
 
-  // Пример массива товаров
   const products = [
     {
       id: 1,
       title: "Product 1",
-      description: "Description for Product 1",
       price: 50,
-      size: "M",
+      description: "Description",
       image: "/image/11.jpg",
     },
-    {
-      id: 2,
-      title: "Product 2",
-      description: "Description for Product 2",
-      price: 80,
-      size: "L",
-      image: "/image/12.jpg",
-    },
-    {
-      id: 3,
-      title: "Product 3",
-      description: "Description for Product 3",
-      price: 30,
-      size: "S",
-      image: "/image/13.jpg",
-    },
-    {
-      id: 4,
-      title: "Product 4",
-      description: "Description for Product 4",
-      price: 60,
-      size: "XL",
-      image: "/image/14.jpg",
-    },
-    // Добавьте больше товаров при необходимости
+    // Добавьте другие товары здесь
   ];
 
   const handleAddToCart = (product) => {
@@ -63,36 +37,36 @@ const App = () => {
 
   const handleUpdateQuantity = (id, quantity) => {
     setCartItems((prevItems) =>
-      prevItems
-        .map((item) =>
-          item.id === id ? { ...item, quantity: Math.max(0, quantity) } : item
-        )
-        .filter((item) => item.quantity > 0)
+      prevItems.map((item) =>
+        item.id === id ? { ...item, quantity: Math.max(0, quantity) } : item
+      )
     );
   };
 
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/catalog"
-          element={
-            <Catalog products={products} onAddToCart={handleAddToCart} />
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <CartPage
-              cartItems={cartItems}
-              onUpdateQuantity={handleUpdateQuantity}
-            />
-          }
-        />
-      </Routes>
-      <Footer />
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/catalog"
+            element={
+              <Catalog products={products} onAddToCart={handleAddToCart} />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <CartPage
+                cartItems={cartItems}
+                onUpdateQuantity={handleUpdateQuantity}
+              />
+            }
+          />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 };
