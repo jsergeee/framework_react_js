@@ -13,6 +13,14 @@ ol {
   /* Убираем маркеры у списков */
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Занять всю высоту окна */
+  width: 100vw;
+  justify-content: space-between;
+}
+
 a {
   text-decoration: none;
   /* Убираем подчеркивание */
@@ -44,15 +52,25 @@ a {
   justify-content: flex-end !important;
 }
 
+.Hero {
+  position: relative;
+}
+
 .hero {
   display: flex;
-  height: 764px;
   background-color: #f1e4e6;
-  align-items: center;
   justify-content: center;
   margin: auto;
   margin-bottom: 30px;
-  width: 100vw;
+  box-sizing: border-box;
+}
+
+.img_hero {
+  background-image: url(/public/image/1.svg);
+  background-size: cover;
+  background-position: center;
+  width: 260px;
+  height: 360px;
 }
 
 .carousel {
@@ -100,6 +118,8 @@ a {
 
 .text_hero {
   border-left: 12px solid #f16d7f;
+  justify-content: center;
+  margin: auto 0px auto;
 }
 
 .offer {
@@ -282,13 +302,14 @@ ul {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 100vw;
   padding-left: 0px;
   padding-right: 0px;
   margin: 0 auto;
 }
 
 .header {
+  position: relative;
   background: #222222;
   padding-top: 19px;
   padding-bottom: 18px;
@@ -440,12 +461,8 @@ ul {
   text-align: center;
 }
 
-.header__container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header__logo {
+  margin-left: 10px;
   display: flex;
   align-items: end;
   gap: 41px;
@@ -453,7 +470,6 @@ ul {
 
 .header__container {
   display: flex;
-  justify-content: space-between;
 }
 
 .header__search {
@@ -529,10 +545,6 @@ ul {
 
 .menu_content_item {
   margin: 16px 13px 16px 13px;
-}
-
-.hero {
-  background: #f1e4e6;
 }
 
 .hero__container {
@@ -620,8 +632,10 @@ ul {
 }
 
 .goods {
+  margin: 10px auto 10px;
   padding-top: 60px;
   padding-bottom: 95px;
+  max-width: 1140px;
 }
 
 .goods__title {
@@ -750,10 +764,10 @@ ul {
 
 .features {
   position: relative;
-  padding: 104px 0;
+  padding: 10px 0;
   background-color: #222224;
   color: #fbfbfb;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
 .features__list {
@@ -869,11 +883,21 @@ ul {
 .footer {
   padding: 24px 0;
   background-color: #222224;
+  margin-top: auto;
+}
+
+.footer-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  gap: 0px;
+  bottom: auto;
+  margin: 10px 0px 0px;
 }
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -1168,9 +1192,6 @@ ul {
   }
   .goods__item {
     flex-basis: 359px;
-  }
-  .container {
-    padding: 0px;
   }
   .registration {
     display: flex;

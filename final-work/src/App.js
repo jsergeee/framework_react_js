@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import CartPage from "./pages/CartPage";
+import Body from "./pages/Body";
+import Hero from "./components/Hero";
+import Goods from "./components/Goods";
 import "./style/style.css";
 
 const App = () => {
@@ -45,28 +48,29 @@ const App = () => {
 
   return (
     <Router>
-      <div className="container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/catalog"
-            element={
-              <Catalog products={products} onAddToCart={handleAddToCart} />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <CartPage
-                cartItems={cartItems}
-                onUpdateQuantity={handleUpdateQuantity}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Hero />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/catalog"
+          element={
+            <Catalog products={products} onAddToCart={handleAddToCart} />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <CartPage
+              cartItems={cartItems}
+              onUpdateQuantity={handleUpdateQuantity}
+            />
+          }
+        />
+      </Routes>
+      <Body />
+      <Goods />
+      <Footer />
     </Router>
   );
 };
