@@ -5,7 +5,6 @@ const Hero = () => {
     <div className="Hero">
       <div class="hero">
         <div class="img_hero">
-          
         </div>
 
         <div class="text_hero">

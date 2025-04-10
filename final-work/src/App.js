@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import CartPage from "./pages/CartPage";
-import Body from "./pages/Body";
+import Body from "./components/Body";
 import Hero from "./components/Hero";
 import Goods from "./components/Goods";
 import "./style/style.css";
