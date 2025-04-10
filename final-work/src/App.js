@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import CartPage from "./pages/CartPage";
-import Body from "./components/Body";
-import Hero from "./components/Hero";
-import Goods from "./components/Goods";
 import "./style/style.css";
 
 const App = () => {
@@ -48,8 +43,7 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
-      <Hero />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -68,9 +62,6 @@ const App = () => {
           }
         />
       </Routes>
-      <Body />
-      <Goods />
-      <Footer />
     </Router>
   );
 };
