@@ -7,7 +7,7 @@ const Catalog = ({ products, onAddToCart, pageTitle = "HOME" }) => {
     <div>
       <div className="top-head">
         <div className="top-head_navigation">
-          <h2 className="top-head__heading"></h2>
+          <h2 className="top-head__heading">CATALOG</h2>
           <nav class="bread_crumbs">
             <Link to="/" class="bread_crambs__link">
               HOME
@@ -29,8 +29,9 @@ const Catalog = ({ products, onAddToCart, pageTitle = "HOME" }) => {
           </nav>
         </div>
       </div>
-      <div className="container goods__container">
-        <h2 className="goods__title">Featured Items</h2>
+      <div className="catalog_Container">
+      <div >
+        <h2 className="goods__title">Catalog</h2>
         <ul className="goods__list">
           {products.map((product) => (
             <Product
@@ -40,6 +41,7 @@ const Catalog = ({ products, onAddToCart, pageTitle = "HOME" }) => {
             />
           ))}
         </ul>
+      </div>
       </div>
     </div>
   );

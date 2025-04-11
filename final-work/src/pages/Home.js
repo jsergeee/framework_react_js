@@ -4,7 +4,26 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="Home">
-        
+      <div className="top-head">
+        <div className="top-head_navigation">
+          <h2 className="top-head__heading">HOME</h2>
+          <nav class="bread_crumbs">
+            <Link
+              to="/"
+              class="bread_crambs__link"
+              style={{ color: "#f16d7f" }}
+            >
+              HOME
+            </Link>
+            <Link to="/catalog" class="bread_crambs__link">
+              CATALOG
+            </Link>
+            <Link to="/cart" class="bread_crambs__link_site">
+              CART
+            </Link>
+          </nav>
+        </div>
+      </div>
       <div className="Hero">
         <div class="hero">
           <div class="img_hero"></div>
@@ -72,7 +91,7 @@ const Home = () => {
             <li class="goods__item product">
               <div class="product__image-wrapper">
                 <img class="product__image" src="/image/11.jpg" alt="" />
-                <button class="product__add">Add to Cart</button>
+                <button class="product__add" >Add to Cart</button>
               </div>
               <div class="product__content">
                 <h3 class="product__title">ELLERY X M'O CAPSULE</h3>
@@ -165,8 +184,6 @@ const Home = () => {
           </button>
         </div>
       </section>
-
-
     </div>
   );
 };

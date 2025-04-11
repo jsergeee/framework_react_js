@@ -19,7 +19,7 @@ ol {
   flex-direction: column;
   height: 100vh; /* Занять всю высоту окна */
   width: 100vw;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 $super_small-screen: 20px;
@@ -360,6 +360,7 @@ ul {
 }
 
 .top-head {
+  position: relative;
   display: flex;
   color: $colorSelectSite;
   background-color: #f1e4e6;
@@ -376,6 +377,7 @@ ul {
     margin: auto;
     flex-wrap: nowrap;
     padding: 10px;
+    gap: 500px;
   }
 
   &__heading {
@@ -402,7 +404,6 @@ ul {
   }
 
   .bread_crambs__link_site {
-    color: $colorSelectSite;
     font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
@@ -746,9 +747,15 @@ ul {
   width: 100%;
 }
 
+.product__image_cart {
+  height: 300px;
+
+}
+
 .product__image-wrapper {
   position: relative;
   min-width: 333px;
+  max-width: 333px;
 }
 
 .product__image-wrapper:after {
@@ -1132,14 +1139,14 @@ ul {
     max-width: 356px;
   }
 
-  .top-head_navigation {
-    padding: 0 16px;
-    width: 100%;
-    max-width: 356px;
-    height: 20%;
-  }
+  // .top-head_navigation {
+  //   padding: 0 16px;
+  //   width: 100%;
+  //   max-width: 356px;
+  //   height: 20%;
+  //   gap: 500px;
+  // }
 
-  
   //   .registration {
   //     display: flex;
   //     // flex-wrap: nowrap !important;
@@ -1325,6 +1332,9 @@ ul {
     max-width: 100%;
     justify-content: center;
   }
+
+
+
   .container_regForm_totalInformation {
     display: flex;
     flex-wrap: wrap !important;
@@ -1355,6 +1365,12 @@ ul {
 
   .goods__container {
     padding: 0 8px;
+
+  }
+
+  .catalogCont {
+    width: 1140px;
+    margin-bottom: 100px;
   }
 
   .goods__item {
@@ -1478,6 +1494,7 @@ ul {
   .product_group_button_container {
     gap: 10px !important;
   }
+
   .product_group {
     max-width: 100%;
     justify-content: center;
@@ -1795,9 +1812,9 @@ input[type="checkbox"] {
 
 .cart {
   position: relative;
+  top: 0px;
   display: flex;
   flex-direction: column;
-  margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
@@ -1816,6 +1833,8 @@ input[type="checkbox"] {
   margin: auto;
 }
 
+
+
 .product_group {
   position: relative;
   display: flex;
@@ -1823,6 +1842,8 @@ input[type="checkbox"] {
   height: 306px;
   box-shadow: 6px 4px 35px;
   margin: auto;
+  align-items: start;
+
 
   &_image1 {
     width: 262px;

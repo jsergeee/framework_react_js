@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 const CartPage = ({ cartItems, onUpdateQuantity }) => {
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -14,15 +11,19 @@ const CartPage = ({ cartItems, onUpdateQuantity }) => {
     <main className="cart">
       <div className="top-head">
         <div className="top-head_navigation">
-          <h2 className="top-head__heading"></h2>
-          <nav class="bread_crumbs">
-            <Link to="/" class="bread_crambs__link">
+          <h2 className="top-head__heading">CART</h2>
+          <nav className="bread_crumbs">
+            <Link to="/" className="bread_crambs__link">
               HOME
             </Link>
-            <Link to="/catalog" class="bread_crambs__link">
+            <Link to="/catalog" className="bread_crambs__link">
               CATALOG
             </Link>
-            <Link to="/cart" class="bread_crambs__link_site">
+            <Link
+              to="/cart"
+              className="bread_crambs__link_site"
+              style={{ color: "#f16d7f" }}
+            >
               CART
             </Link>
           </nav>
@@ -30,14 +31,21 @@ const CartPage = ({ cartItems, onUpdateQuantity }) => {
       </div>
       {cartItems.map((item) => (
         <div key={item.id} className="product_group">
-          <h3>{item.title}</h3>
-          <p>Price: ${item.price}</p>
+          <h3 style={{ margin: "5px" }}>{item.title}</h3>
+          <p style={{ margin: "5px" }}>Price: ${item.price}</p>
+
           <input
             type="number"
             value={item.quantity}
             onChange={(e) =>
               onUpdateQuantity(item.id, parseInt(e.target.value))
             }
+            style={{ height: "30px", width: "40px" }}
+          />
+          <img
+            className="product__image_cart"
+            src={item.image}
+            alt={item.title}
           />
         </div>
       ))}
