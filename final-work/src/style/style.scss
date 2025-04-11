@@ -362,7 +362,7 @@ ul {
 .top-head {
   display: flex;
   color: $colorSelectSite;
-  background-color: #f8f3f4;
+  background-color: #f1e4e6;
   height: 148px;
   align-items: center;
   justify-content: space-around;
@@ -545,6 +545,7 @@ ul {
     top: 27px;
     right: 150px;
     z-index: 10;
+    cursor: pointer;
 
     &_content {
       position: absolute;
@@ -1136,7 +1137,10 @@ ul {
     padding: 0 16px;
     width: 100%;
     max-width: 356px;
+    height: 20%;
   }
+
+  
   //   .registration {
   //     display: flex;
   //     // flex-wrap: nowrap !important;

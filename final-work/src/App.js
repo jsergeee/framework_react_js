@@ -4,6 +4,11 @@ import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import CartPage from "./pages/CartPage";
 import "./style/style.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+
+
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -43,7 +48,7 @@ const App = () => {
 
   return (
     <Router>
-
+      < Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -62,6 +67,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </Router>
   );
 };

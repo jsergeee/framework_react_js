@@ -6,21 +6,49 @@ const Footer = () => {
       <section class="features">
         <div class="container_features">
           <ul class="features__list">
-            <li class="features__item features__item_delivery">
+            <li class="features__item">
+              <img
+                style={{
+                  width: "44.99px",
+                  height: "31.93px",
+                  margin: "10px",
+                }}
+                src="/icon/Free Delivery.svg"
+                alt=""
+              />
               <h3 class="features__item-title">Free Delivery</h3>
               <p class="features__item-description">
                 Worldwide delivery on all. Authorit tively morph next-generation
                 innov tion with extensive models.
               </p>
             </li>
-            <li class="features__item features__item_discount">
+            <li class="features__item">
+              <img
+                style={{
+                  width: "44.99px",
+                  height: "31.93px",
+                  margin: "10px",
+                }}
+                src="/icon/Sales & discounts.svg"
+                alt=""
+              />
               <h3 class="features__item-title">Sales & discounts</h3>
               <p class="features__item-description">
                 Worldwide delivery on all. Authorit tively morph next-generation
                 innov tion with extensive models.
               </p>
             </li>
-            <li class="features__item features__item_quality">
+
+            <li class="features__item">
+              <img
+                style={{
+                  width: "44.99px",
+                  height: "31.93px",
+                  margin: "10px",
+                }}
+                src="/icon/Quality assurance.svg"
+                alt=""
+              />
               <h3 class="features__item-title">Quality assurance</h3>
               <p class="features__item-description">
                 Worldwide delivery on all. Authorit tively morph next-generation
@@ -69,7 +97,7 @@ const Footer = () => {
         </div>
       </section>
       <footer class="footer">
-        <div class="container footer__container">
+        <div class="footer__container">
           <p class="footer__copyright">© 2022 Brand All Rights Reserved.</p>
 
           <ul class="footer__social-list">
