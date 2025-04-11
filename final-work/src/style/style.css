@@ -333,7 +333,6 @@ ul {
 .top-head_navigation {
   display: flex;
   align-items: center;
-  width: 1140px;
   justify-content: space-between;
   margin: auto;
   flex-wrap: nowrap;
@@ -1581,7 +1580,7 @@ input[type=checkbox] {
 .cart {
   position: relative;
   display: flex;
-  max-width: 1140px;
+  flex-direction: column;
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
