@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Product = ({ product, onAddToCart }) => {
   return (
     <li className="goods__item product">

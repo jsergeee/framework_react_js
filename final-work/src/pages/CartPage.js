@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const CartPage = ({ cartItems, onUpdateQuantity }) => {
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -31,6 +32,11 @@ const CartPage = ({ cartItems, onUpdateQuantity }) => {
       </div>
       {cartItems.map((item) => (
         <div key={item.id} className="product_group">
+                    <img
+            className="product__image_cart"
+            src={item.image}
+            alt={item.title}
+          />
           <h3 style={{ margin: "5px" }}>{item.title}</h3>
           <p style={{ margin: "5px" }}>Price: ${item.price}</p>
 
@@ -42,11 +48,7 @@ const CartPage = ({ cartItems, onUpdateQuantity }) => {
             }
             style={{ height: "30px", width: "40px" }}
           />
-          <img
-            className="product__image_cart"
-            src={item.image}
-            alt={item.title}
-          />
+
         </div>
       ))}
       <div className="container_regForm_totalInformation">
