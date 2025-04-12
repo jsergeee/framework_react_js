@@ -6,7 +6,7 @@ import CartPage from "./pages/CartPage";
 import "./style/style.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { products } from "./data/products"; // Импортируйте массив products
+import { products } from "./data/products";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -37,12 +37,10 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
         <Route
           path="/catalog"
-          element={
-            <Catalog products={products} onAddToCart={handleAddToCart} />
-          }
+          element={<Catalog products={products} onAddToCart={handleAddToCart} />}
         />
         <Route
           path="/cart"

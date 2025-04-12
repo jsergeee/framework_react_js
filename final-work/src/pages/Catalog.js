@@ -32,7 +32,7 @@ const Catalog = ({ products, onAddToCart, pageTitle = "HOME" }) => {
       </div>
       <div className="catalog_Container">
       <div >
-        <h2 className="goods__title">Catalog</h2>
+        <h2 className="goods__title"></h2>
         <ul className="goods__list">
           {products.map((product) => (
             <Product
